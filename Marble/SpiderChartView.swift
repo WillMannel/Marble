@@ -75,6 +75,12 @@ struct SpiderChart: View {
                 
                 Text("\(dataPoints[index], specifier: "%.1f")")
                     .position(x: x + 20 * cos(CGFloat(index) * angle), y: y + 20 * sin(CGFloat(index) * angle))
+                Text(categories[index])
+                    .font(.caption)
+                    .position(x: x + 40 * cos(CGFloat(index) * angle), y: y + 40 * sin(CGFloat(index) * angle) + 20)  // Added +20 to y position
+
+
+
             }
             
             Path { path in
